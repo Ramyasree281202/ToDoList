@@ -1,0 +1,188 @@
+html {
+  /* background-color: #e4e9fd;
+  background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%); */
+  /* background-col or: #c73bc2;
+background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png"); */
+  /* min-height: 1000px;
+  font-family: "helvetica neue";
+  display: flex; */
+  /* flex-direction: column;
+  justify-content: stretch;
+  min-height: 95vh;
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+  font-family: "Roboto", sans-serif;
+  background-image: url("../Images/bgimghd.jpg");
+  background-size: cover; */
+}
+body {
+  min-height: 1000px;
+  font-family: "helvetica neue";
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  min-height: 95vh;
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+  font-family: "Roboto", sans-serif;
+  background-image: url("../Images/bgimghd.jpg");
+  background-size: cover;
+  
+  /* display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  min-height: 95vh;
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+  font-family: "Roboto", sans-serif;
+  background-image: url("../Images/bgimghd.jpg");
+  background-size: cover; */
+  margin-bottom: 100px;
+}
+main {
+  text-align: center;
+  flex: 1 0 auto;
+ 
+}
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+/*heading box and content box*/
+.box {
+  max-width: 600px;
+  margin: 50px auto;
+  background: rgba(60, 91, 111, 0.8);
+  
+  /* background-color: #c036c7;
+background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+ background-image:   transparent; */
+  /* background-image: url("../Images/bgimg1.jpg");
+  background-size: cover; */
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #3C5B6F;
+  text-align: center;
+  width: 600px;
+  margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+form.edit {
+  display: flex;
+}
+button.edit span{
+  padding-left: 50px;
+  font-size: 20px;
+  /* color: red; */
+}
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  
+}
+
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+  margin-left: 0;
+}
+
+p {
+  margin: 0;
+  padding: 20px 0;
+  font-size: 20px;
+  color: #00204a;
+}
+.yet{
+  color: orange;
+  font-style: bold;
+  font-family: "Roboto", sans-serif;
+}
+.done{
+  color: orange;
+  font-size: 20px;
+  font-weight: bold;
+}
+form {
+  text-align: center;
+  margin-left: 20px;
+}
+/* plus button*/
+button.add {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: orange;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+}
+/*pencil button*/
+button.edit {
+  margin-left: 0px;
+  margin-right: 20px;
+  border: none;
+  background: none;
+}
+
+.icon {
+  height: 20px;
+  
+}
+
+input[type="text"] {
+  text-align: left;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  width: 80%;
+  color: white;
+}
+.one{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 orange;
+}
+
+::placeholder {
+  color: lightgray;
+  opacity: 1;
+}
+/*copy right*/
+footer {
+  flex: 0 0 auto;
+  color: #3C5B6F;
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 100px;
+}
+.delIcon{
+  width: 20px;
+  height: 20px;
+}
+.delete-icon {
+  
+  cursor: pointer;
+  color: orange;
+  margin-right: 10px;
+  background: none;
+  border: none;
+}

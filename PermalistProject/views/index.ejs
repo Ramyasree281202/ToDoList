@@ -1,0 +1,74 @@
+
+<%- include('partials/header.ejs'); -%>
+
+  <div  id="heading">
+    <h1>
+      <!-- Today -->
+      <%= listTitle1 %> <%= listTitle2 %> 
+    </h1>
+  </div>
+  <div class="box">
+    <!-- listItems from index.js -->
+    <% for(let item of listItems){%>
+      <div class="item">
+
+        <!-- check box -->
+        <form action="/delete" method="post">
+         
+          <!-- <i class="fas fa-trash-alt"></i> -->
+          <!-- <input type="checkbox" onchange="this.form.submit()" name="deleteItemId" value="<%= item.id %>"> -->
+          <button class="delete-icon" type="submit" name="deleteItemId" value="<%= item.id %>"><i class="fas fa-trash-alt delIcon"></i></button>
+       
+        </form>
+       
+
+        <!-- Buying Milk example -->
+        <p class="one" id="title<%=item.id%>">
+          <!-- title is the title we given in database -->
+          <%= item.title %>
+        </p>
+        <!-- pencil and check symbol -->
+        <form class="edit" action="/edit" method="post">
+          <input type="hidden" name="updatedItemId" value="<%= item.id %>">
+          <input id="input<%=item.id%>" type="text" name="updatedItemTitle" value="<%= item.title %>" autocomplete="off"
+            autofocus="true" hidden="true" />
+          <button id="done<%=item.id%>" class="edit" type="submit"  hidden>
+            <!-- <img class="icon"
+              src="/assets/icons/check-solid.svg" alt="tick image"> -->
+              <span class="done">Done
+                <i class="fa-solid fa-champagne-glasses"></i>
+              </span>
+            </button>
+        </form>
+        <button id="edit<%=item.id%>" class="edit" onclick="handler('<%=item.id%>')"><img class="icon"
+            src="/assets/icons/pencil-solid.svg" alt="pencil image"><span class="yet">Yet not completed</span></button>
+            
+      </div>
+      <% } %>
+        <!-- + button -->
+        <form class="item" action="/add" method="post">
+          <input type="text" name="newItem" placeholder="Make a TO-DO LIST everday, Keep it visible" autocomplete="off" autofocus="true" />
+          <button class="add" type="submit" name="list" value=<%=listTitle1 %> >+</button>
+        </form>
+  </div>
+
+
+  <script>
+    function handler(id) {
+      document.getElementById("title" + id).setAttribute("hidden", true)
+      document.getElementById("edit" + id).setAttribute("hidden", true)
+      document.getElementById("done" + id).removeAttribute("hidden")
+      document.getElementById("input" + id).removeAttribute("hidden")
+    }
+    // function Completed(id){
+    //   const CompletedTask=document.getElementById("done" + id).removeAttribute("hidden")
+    //   CompletedTask.innerHTML='';
+    //   completedTasks.forEach(task => {
+    //     const li = document.createElement('li');
+    //     li.textContent = task;
+    //     completedTasksList.appendChild(li);
+    // });
+
+    // }
+  </script>
+  <%- include('partials/footer.ejs'); -%>
